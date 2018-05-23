@@ -20,7 +20,6 @@ class Banner extends Component {
     this.setState({
       index: this.state.index + 1
     })
-    console.log("index:" + this.state.index);
   }
 
   handleWindowSize = () => {
@@ -44,7 +43,7 @@ class Banner extends Component {
     let dotStyle = null;
     const dots = [1, 2, 3];
 
-    style = width <= 800 ? 
+    style = width <= 780 ? 
     { 
       width: width, 
       height: (width / 4) * 3,
