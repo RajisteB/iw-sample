@@ -161,7 +161,8 @@ body, html {
 }
 .grid-item {
   padding: 15px 0px ;
-  flex-basis: 47.5%;
+  flex-basis: auto;
+  width: 47.5%;
   @include flex(flex-start, flex-start);
   flex-direction: column;
   img {
@@ -268,7 +269,8 @@ footer {
     h6 { font-size: 1em; }
   }
   .grid-item {
-    flex-basis: 30%;
+    flex-basis: auto;
+    width: 30%;
     h2 {
       font-size: 2em;
     }
