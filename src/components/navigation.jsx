@@ -18,17 +18,6 @@ const navigation = () => {
           </div>
         </div>
       </div>
-      {/* <div className="logo col">
-        <img src={Logo} alt="logo"/>
-      </div>
-      <div className="break col">sdas</div>
-      <div className="nav-items col">
-        <div className="item">212.555.5555</div>
-        <div className="item">LOGIN</div>
-        <div className="item">
-          <img src={Burger} alt="burger"/>
-        </div>
-      </div> */}
     </div>
   )
 

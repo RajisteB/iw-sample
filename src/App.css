@@ -22,6 +22,14 @@ body, html {
   font-size: 16px;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Springville';
+  src: url(./fonts/Springville-Regular3.otf); }
+
+@font-face {
+  font-family: 'ACaslon';
+  src: url(./fonts/ACaslonPro-Regular.otf); }
+
 .nav-container {
   width: 100%;
   height: 50px;
@@ -57,6 +65,60 @@ body, html {
     opacity: 0.4;
     margin-right: 2.5em; }
 
+.banner {
+  height: 600px;
+  overflow: hidden;
+  max-width: 1440px;
+  margin-top: 50px;
+  position: relative;
+  background: orange; }
+
+.banner-img {
+  width: 1440px;
+  height: 600px; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .overlay .headline {
+    width: 80%;
+    color: white;
+    margin: 0 auto; }
+
+.headline h1 {
+  font-family: 'Springville', sans-serif;
+  font-size: 5.2vw; }
+
+.headline h3 {
+  font-family: 'ACaslon', sans-serif;
+  font-weight: thin;
+  font-size: 3.05vw; }
+
+.headline h6 {
+  font-family: 'ACaslon', sans-serif;
+  font-weight: thin;
+  font-size: 2.25vw; }
+
+.dots-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.dots {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: gray; }
+
 @media screen and (min-width: 375px) {
   .logo.col > img {
     width: 138.24px;
@@ -64,7 +126,9 @@ body, html {
   .nav-items {
     font-size: 0.5em; }
   .item img {
-    height: 12px; } }
+    height: 12px; }
+  .banner {
+    margin-top: 50px; } }
 
 @media screen and (min-width: 425px) {
   .nav-container {
@@ -75,7 +139,9 @@ body, html {
   .nav-items {
     font-size: 0.6em; }
   .item img {
-    height: 14px; } }
+    height: 14px; }
+  .banner {
+    margin-top: 60px; } }
 
 @media screen and (min-width: 768px) {
   .nav-container {
@@ -86,4 +152,17 @@ body, html {
   .nav-items {
     font-size: 0.8em; }
   .item img {
-    height: 18px; } }
+    height: 18px; }
+  .banner {
+    margin-top: 70px; }
+  .headline h1 {
+    font-size: 4.2vw; }
+  .headline h3 {
+    font-size: 2.05vw; }
+  .headline h6 {
+    font-size: 1.25vw; } }
+
+@media screen and (min-width: 1440px) {
+  .banner {
+    margin: 0 auto;
+    margin-top: 70px; } }

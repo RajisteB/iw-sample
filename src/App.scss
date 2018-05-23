@@ -22,13 +22,26 @@ body, html {
   font-size: 16px;
   box-sizing: border-box;
 }
+// ========================
+// Imported Fonts
+// ------------------------
+@font-face {
+  font-family: 'Springville';
+  src: url(./fonts/Springville-Regular3.otf);
+}
+@font-face {
+  font-family: 'ACaslon';
+  src: url(./fonts/ACaslonPro-Regular.otf);
+}
 
+// ========================
+// Mixins
+// ------------------------
 @mixin flex($justify-content, $align-items) {
   display: flex;
   align-items: $align-items;
   justify-content: $justify-content;
 }
-
 @mixin logo-ratio($height) {
   width: $height * 5.76;
   height: $height;
@@ -70,8 +83,78 @@ body, html {
   }
 }
 
+// ====================
+// Hero - Banner
+// --------------------
+.banner {
+  height: 600px;
+  overflow: hidden;
+  max-width: 1440px;
+  margin-top: 50px;
+  position: relative;
+  background: orange;
+}
+.banner-img {
+  width: 1440px;
+  height: 600px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  
+  top: 0;
+  z-index: 999;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(flex-start, center);
+  .headline {
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+  }
+}
+
+// ====================
+// Banner Headline
+// --------------------
+.headline {
+  h1 {
+    font-family: 'Springville', sans-serif;
+    font-size: 5.2vw;
+  }
+  h3 {
+    font-family: 'ACaslon', sans-serif;
+    font-weight: thin;
+    font-size: 3.05vw;
+  }
+  h6 {
+    font-family: 'ACaslon', sans-serif;
+    font-weight: thin;
+    font-size: 2.25vw;
+  }
+}
+
+// ====================
+// Banner Image Dots
+// --------------------
+.dots-container {
+  width: 100%;
+  @include flex(center, center)
+}
+.dots {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: gray;
+}
+
+// ====================
+// Media Queries
+// --------------------
+
 @media screen and (min-width: 375px) {
-.logo.col>img {
+  .logo.col>img {
     @include logo-ratio(24px);
   }
   .nav-items {
@@ -80,7 +163,11 @@ body, html {
   .item img {
     height: 12px;
   }
+  .banner {
+    margin-top: 50px;
+  }
 }
+
 @media screen and (min-width: 425px) {
   .nav-container {
     height: 60px;
@@ -94,7 +181,11 @@ body, html {
   .item img {
     height: 14px;
   }
+  .banner {
+    margin-top: 60px;
+  }
 }
+
 @media screen and (min-width: 768px) {
   .nav-container {
     height: 70px;
@@ -108,5 +199,19 @@ body, html {
   .item img {
     height: 18px;
   }
+  .banner {
+    margin-top: 70px;
+  }
+  .headline {
+    h1 { font-size: 4.2vw; }
+    h3 { font-size: 2.05vw; }
+    h6 { font-size: 1.25vw; }
+  }
 }
 
+@media screen and (min-width: 1440px) {
+  .banner {
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+}
