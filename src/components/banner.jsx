@@ -81,7 +81,6 @@ class Banner extends Component {
       </section>
     )
   }
-
 }
 
 export default Banner;

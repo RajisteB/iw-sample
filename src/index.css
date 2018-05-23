@@ -35,11 +35,13 @@ body, html {
   height: 50px;
   top: 0;
   left: 0;
+  z-index: 9;
   position: fixed;
-  border-bottom: 1px solid #000; }
+  background: white; }
 
 .navbar {
   width: 90%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -66,45 +68,40 @@ body, html {
     margin-right: 2.5em; }
 
 .banner {
-  height: 600px;
   overflow: hidden;
   max-width: 1440px;
   margin-top: 50px;
   position: relative;
   background: orange; }
 
-.banner-img {
-  width: 1440px;
-  height: 600px; }
-
 .overlay {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 999;
+  z-index: 8;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: flex-start; }
   .overlay .headline {
-    width: 80%;
+    width: 90%;
     color: white;
     margin: 0 auto; }
 
-.headline h1 {
-  font-family: 'Springville', sans-serif;
-  font-size: 5.2vw; }
-
-.headline h3 {
-  font-family: 'ACaslon', sans-serif;
-  font-weight: thin;
-  font-size: 3.05vw; }
-
-.headline h6 {
-  font-family: 'ACaslon', sans-serif;
-  font-weight: thin;
-  font-size: 2.25vw; }
+.headline {
+  padding-top: 45px; }
+  .headline h1 {
+    font-family: 'Springville', sans-serif;
+    font-size: 8vw; }
+  .headline h3 {
+    font-family: 'ACaslon', sans-serif;
+    font-weight: thin;
+    font-size: 3.05vw; }
+  .headline h6 {
+    font-family: 'ACaslon', sans-serif;
+    font-weight: 300;
+    font-size: 3vw; }
 
 .dots-container {
   width: 100%;
@@ -118,6 +115,51 @@ body, html {
   border-radius: 50%;
   margin: 10px;
   background-color: gray; }
+
+.main-grid {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.grid-item {
+  padding: 15px 0px;
+  flex-basis: 47.5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column; }
+  .grid-item img {
+    width: 100%; }
+  .grid-item h4 {
+    color: rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2vw;
+    padding: 25px 0px 15px 0px; }
+  .grid-item h2 {
+    font-family: 'Springville', sans-serif;
+    font-size: 4.5vw; }
+  .grid-item h5 {
+    padding: 10px 0px;
+    font-size: 1.5vw;
+    font-weight: thin; }
+    .grid-item h5 span {
+      text-decoration: underline; }
+
+footer {
+  width: 100%;
+  padding: 10px 0px;
+  max-width: 1440px;
+  text-align: center;
+  font-family: 'Arial', sans-serif; }
+  footer h5 {
+    font-size: 2vw; }
+    footer h5 span {
+      margin-left: 1px;
+      text-decoration: underline; }
 
 @media screen and (min-width: 375px) {
   .logo.col > img {
@@ -156,11 +198,13 @@ body, html {
   .banner {
     margin-top: 70px; }
   .headline h1 {
-    font-size: 4.2vw; }
+    font-size: 4.7vw; }
   .headline h3 {
     font-size: 2.05vw; }
   .headline h6 {
-    font-size: 1.25vw; } }
+    font-size: 1.6vw; }
+  .grid-item {
+    flex-basis: 30%; } }
 
 @media screen and (min-width: 1440px) {
   .banner {
