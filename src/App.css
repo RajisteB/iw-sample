@@ -14,66 +14,76 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
 
 body, html {
   max-width: 100vw;
+  font-size: 16px;
   box-sizing: border-box; }
 
-.navbar {
+.nav-container {
   width: 100%;
   height: 50px;
+  top: 0;
+  left: 0;
   position: fixed;
-  background: blue;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000; }
+
+.navbar {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between; }
   .navbar .logo {
     height: 100%;
-    background: red;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: flex-start; }
     .navbar .logo img {
-      width: 104px;
-      height: 18px;
-      margin-left: 16px; }
-  .navbar .nav-items {
-    width: 40%;
-    margin-right: 16px;
-    background: yellow;
-    font-size: 0.6em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  @media screen and (min-width: 400px) {
-    .navbar .nav-items {
-      width: 40%;
-      font-size: 0.7em; }
-    .navbar .logo img {
-      width: 138px;
-      height: 24px; } }
-  @media screen and (min-width: 525px) {
-    .navbar .nav-items {
-      width: 25%; }
-    .navbar .logo img {
-      width: 184px;
-      height: 309px; } }
-  @media screen and (min-width: 750px) {
-    .navbar .nav-items {
-      width: 20%;
-      font-size: 0.8em; }
-    .navbar .logo img {
-      width: 196px;
-      height: 34px; } }
-  @media screen and (min-width: 1200px) {
-    .navbar .nav-items {
-      width: 15%;
-      font-size: 0.9em; } }
-  @media screen and (min-width: 1800px) {
-    .navbar .nav-items {
-      width: 10%;
-      font-size: 1em; } }
+      width: 103.68px;
+      height: 18px; }
+
+.nav-items {
+  font-size: 0.38em;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .nav-items .item:nth-child(1),
+  .nav-items .item:nth-child(2) {
+    opacity: 0.4;
+    margin-right: 2.5em; }
+
+@media screen and (min-width: 375px) {
+  .logo.col > img {
+    width: 138.24px;
+    height: 24px; }
+  .nav-items {
+    font-size: 0.5em; }
+  .item img {
+    height: 12px; } }
+
+@media screen and (min-width: 425px) {
+  .nav-container {
+    height: 60px; }
+  .logo.col > img {
+    width: 184.32px;
+    height: 32px; }
+  .nav-items {
+    font-size: 0.6em; }
+  .item img {
+    height: 14px; } }
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    height: 70px; }
+  .logo.col > img {
+    width: 195.84px;
+    height: 34px; }
+  .nav-items {
+    font-size: 0.8em; }
+  .item img {
+    height: 18px; } }
