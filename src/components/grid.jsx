@@ -36,7 +36,6 @@ const data = [
 ]
 
 const Grid = () => {
-  console.log(data[0]);
   return (
     <div className="main-grid">
       {data.map((m, idx) => {

@@ -12,8 +12,9 @@ class Banner extends Component {
       index: 0,
       width: window.innerWidth,
       touchStart: null,
-      touchEnd: null,
+      touchMove: null,
     }
+    this.bannerInterval = null;
   }
 
   handleImageSlide = () => {
@@ -31,54 +32,44 @@ class Banner extends Component {
     })
   }
 
-  handleTouch = (e) => {
-    this.setState({
-      touchStart: e.touches[0].clientX
-    })
+  handleTouchStart = (e) => {
+    this.setState({ touchStart: e.touches[0].clientX})
   }
 
-  handleSwipe = (e) => {
-    let diff = null;
+  handleTouchMove = (e) => {
+    clearInterval(this.bannerInterval);
     this.setState({ 
-      touchEnd: e.touches[0].clientX
-    })
+      touchMove: e.touches[0].clientX,
+     })
+  }
 
-    if ( !this.state.touchStart ) {
-      return;
+  handleTouchEnd = (e) => {
+    let { touchStart, touchMove } = this.state;
+    let diff = touchMove - touchStart;
+    
+    if ( diff < 0 && this.state.index <= 1 ) {
+      this.setState({ index: this.state.index + 1 })
+    } else if ( diff > 0 && this.state.index >= 1 ){
+      this.setState({ index: this.state.index - 1 })
+    } else {
+      this.setState({ index: 0 })
     }
 
-    diff = this.state.touchStart - this.state.touchEnd;
-
-    if (diff < 0 ) { 
-      if (this.state.index === 0) {
-        this.setState({ index: 0 })
-      } else {
-        this.setState({ index: this.state.index - 1 })
-      }
-    } else if (diff > 0) {
-      if (this.state.index === 2) {
-        this.setState({ index: 0 })
-      } else {
-        this.setState({ index: this.state.index + 1 })
-      }
-    }
   }
 
   componentDidMount() {
-    setInterval(() => {
-      this.handleImageSlide();
-    }, 5000);
-    window.addEventListener("resize", this.handleWindowSize)
+    this.bannerInterval = setInterval(this.handleImageSlide, 5000);
+    window.addEventListener("resize", this.handleWindowSize);
   }
 
   render() {
     let { index, width } = this.state;
     let image = images[index];
-    let style = null;
+    let styles = null;
     let dotStyle = null;
     const dots = [1, 2, 3];
 
-    style = width <= 780 ? 
+    styles = width <= 780 ? 
     { 
       width: width, 
       height: (width / 4) * 3,
@@ -87,13 +78,17 @@ class Banner extends Component {
 
     return (
       <section>
-        <div className="banner" style={style}>
-          <img src={image} 
+        <div className="banner" style={styles} id="hero-banner" 
+          onTouchStart={this.handleTouchStart}
+          onTouchMove={this.handleTouchMove}
+          onTouchEnd={this.handleTouchEnd}
+        >
+          <img 
+            id="banner-imgs"
+            src={image} 
             alt="banner" 
             className="banner-img" 
-            style={style} 
-            onTouchStart={this.element.addEventListener('touchstart', this.handleTouch)}
-            onTouchEnd={this.element.addEventListener('touchend', this.handleSwipe)}
+            style={styles} 
           />
           <div className="overlay">
             <div className="headline">
