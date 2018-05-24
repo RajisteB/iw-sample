@@ -10,7 +10,9 @@ class Banner extends Component {
     super();
     this.state = {
       index: 0,
-      width: window.innerWidth
+      width: window.innerWidth,
+      touchStart: null,
+      touchEnd: null,
     }
   }
 
@@ -27,6 +29,39 @@ class Banner extends Component {
     this.setState({
       width: w
     })
+  }
+
+  handleTouch = (e) => {
+    this.setState({
+      touchStart: e.touches[0].clientX
+    })
+  }
+
+  handleSwipe = (e) => {
+    let diff = null;
+    this.setState({ 
+      touchEnd: e.touches[0].clientX
+    })
+
+    if ( !this.state.touchStart ) {
+      return;
+    }
+
+    diff = this.state.touchStart - this.state.touchEnd;
+
+    if (diff < 0 ) { 
+      if (this.state.index === 0) {
+        this.setState({ index: 0 })
+      } else {
+        this.setState({ index: this.state.index - 1 })
+      }
+    } else if (diff > 0) {
+      if (this.state.index === 2) {
+        this.setState({ index: 0 })
+      } else {
+        this.setState({ index: this.state.index + 1 })
+      }
+    }
   }
 
   componentDidMount() {
@@ -53,7 +88,13 @@ class Banner extends Component {
     return (
       <section>
         <div className="banner" style={style}>
-          <img src={image} alt="banner" className="banner-img" style={style}/>
+          <img src={image} 
+            alt="banner" 
+            className="banner-img" 
+            style={style} 
+            onTouchStart={this.handleTouch}
+            onTouchEnd={this.handleSwipe}
+          />
           <div className="overlay">
             <div className="headline">
               <h1>
