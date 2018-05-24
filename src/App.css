@@ -125,7 +125,8 @@ body, html {
 
 .grid-item {
   padding: 15px 0px;
-  flex-basis: 47.5%;
+  flex-basis: auto;
+  width: 47.5%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -205,11 +206,25 @@ footer {
   .headline h6 {
     font-size: 1em; }
   .grid-item {
-    flex-basis: 30%; }
+    flex-basis: auto;
+    width: 30%; }
     .grid-item h2 {
       font-size: 2em; } }
 
 @media screen and (min-width: 1024px) {
+  .banner {
+    margin: 0 auto;
+    margin-top: 70px; }
+  .headline h1 {
+    font-size: 4em; }
+  .headline h3 {
+    font-size: 2.2em; }
+  .headline h6 {
+    font-size: 1.2em; }
+  .grid-item h2 {
+    font-size: 2.5em; } }
+
+@media screen and (min-width: 1440px) {
   .banner {
     margin: 0 auto;
     margin-top: 70px; }

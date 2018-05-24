@@ -92,8 +92,8 @@ class Banner extends Component {
             alt="banner" 
             className="banner-img" 
             style={style} 
-            onTouchStart={this.handleTouch}
-            onTouchEnd={this.handleSwipe}
+            onTouchStart={this.element.addEventListener('touchstart', this.handleTouch)}
+            onTouchEnd={this.element.addEventListener('touchend', this.handleSwipe)}
           />
           <div className="overlay">
             <div className="headline">
