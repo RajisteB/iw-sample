@@ -66,13 +66,15 @@ body, html {
   .nav-items .item:nth-child(2) {
     opacity: 0.4;
     margin-right: 2.5em; }
+  .nav-items a {
+    text-decoration: none;
+    color: black; }
 
 .banner {
   overflow: hidden;
   position: relative;
   max-width: 1440px;
-  margin-top: 50px;
-  background: orange; }
+  margin-top: 50px; }
 
 .overlay {
   width: 100%;
@@ -136,7 +138,7 @@ body, html {
   .grid-item h4 {
     color: rgba(0, 0, 0, 0.3);
     padding: 25px 0px 15px 0px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-family: 'Arial', sans-serif; }
   .grid-item h2 {
     font-size: 1.5em;
@@ -146,13 +148,15 @@ body, html {
       text-decoration: underline; }
   .grid-item h5 {
     padding: 10px 0px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: thin; }
-    .grid-item h5 span {
+    .grid-item h5 a {
+      color: black;
       text-decoration: underline; }
 
 footer {
   width: 100%;
+  margin: 0 auto;
   padding: 25px 0px;
   max-width: 1440px;
   text-align: center;
@@ -162,6 +166,8 @@ footer {
     footer h5 span {
       margin-left: 1px;
       text-decoration: underline; }
+      footer h5 span a {
+        color: black; }
 
 @media screen and (min-width: 375px) {
   .logo.col > img {
@@ -229,7 +235,7 @@ footer {
     margin: 0 auto;
     margin-top: 70px; }
   .headline h1 {
-    font-size: 4.2em; }
+    font-size: 4.4em; }
   .headline h3 {
     font-size: 2.4em; }
   .headline h6 {

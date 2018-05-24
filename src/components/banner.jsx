@@ -17,6 +17,7 @@ class Banner extends Component {
     this.bannerInterval = null;
   }
 
+  // image slider
   handleImageSlide = () => {
     this.state.index >= 2 ? 
     this.setState({ index: 0 }) :
@@ -25,6 +26,7 @@ class Banner extends Component {
     })
   }
 
+  // banner resize
   handleWindowSize = () => {
     let w = window.innerWidth;
     this.setState({
@@ -32,6 +34,7 @@ class Banner extends Component {
     })
   }
 
+  // swipe functionality
   handleTouchStart = (e) => {
     this.setState({ touchStart: e.touches[0].clientX})
   }
@@ -54,7 +57,6 @@ class Banner extends Component {
     } else {
       this.setState({ index: 0 })
     }
-
   }
 
   componentDidMount() {
@@ -83,13 +85,7 @@ class Banner extends Component {
           onTouchMove={this.handleTouchMove}
           onTouchEnd={this.handleTouchEnd}
         >
-          <img 
-            id="banner-imgs"
-            src={image} 
-            alt="banner" 
-            className="banner-img" 
-            style={styles} 
-          />
+          <img id="banner-imgs" src={image} alt="banner" className="banner-img" style={styles} />
           <div className="overlay">
             <div className="headline">
               <h1>

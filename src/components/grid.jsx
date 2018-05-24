@@ -38,8 +38,8 @@ const data = [
 const Grid = () => {
   return (
     <div className="main-grid">
-      {data.map((m, idx) => {
-        return <GridItem data={m} key={idx}/>
+      {data.map((d, idx) => {
+        return <GridItem data={d} key={idx}/>
       })}
     </div>
   )

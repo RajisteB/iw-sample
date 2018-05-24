@@ -11,8 +11,12 @@ const navigation = () => {
           <img src={Logo} alt="logo"/>
         </div>
         <div className="nav-items col">
-          <div className="item">212.555.5555</div>
-          <div className="item">LOG IN</div>
+          <div className="item">
+            <a href="tel:1-212-555-5555">212.555.5555</a>
+          </div>
+          <div className="item">
+            <a href="#">LOG IN</a>
+          </div>
           <div className="item">
             <img src={Burger} alt="burger"/>
           </div>

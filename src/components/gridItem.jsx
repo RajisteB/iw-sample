@@ -14,7 +14,7 @@ const GridItem = (props) => {
       <img src={layers[props.data.id]} alt=""/>
       <h4>{props.data.date}</h4>
       <h2>{props.data.desc}</h2>
-      <h5>Presented By <span>LOREM IPSUM</span></h5>
+      <h5>Presented By <a href="#">LOREM IPSUM</a></h5>
     </div>
   )
 }

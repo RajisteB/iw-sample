@@ -87,6 +87,10 @@ body, html {
     opacity: 0.4;
     margin-right: 2.5em;
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 // ====================
@@ -97,7 +101,6 @@ body, html {
   position: relative;
   max-width: 1440px;
   margin-top: 50px;
-  background: orange;
 }
 .overlay {
   width: 100%;
@@ -171,7 +174,7 @@ body, html {
   h4 {
     color: rgba(0, 0, 0, 0.3);
     padding: 25px 0px 15px 0px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-family: 'Arial', sans-serif;
   }
   h2 {
@@ -184,9 +187,10 @@ body, html {
   }
   h5 {
     padding: 10px 0px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: thin;
-    span {
+    a {
+      color: black;
       text-decoration: underline;
     }
   }
@@ -197,7 +201,8 @@ body, html {
 // --------------------
 footer {
   width: 100%;
-  padding: 25px 0px;
+  margin: 0 auto;
+    padding: 25px 0px;
   max-width: 1440px;
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -206,6 +211,9 @@ footer {
     span {
       margin-left: 1px;
       text-decoration: underline;
+      a {
+        color: black;
+      }
     }
   }
 }
@@ -298,7 +306,7 @@ footer {
     margin-top: 70px;
   }
   .headline {
-    h1 { font-size: 4.2em; }
+    h1 { font-size: 4.4em; }
     h3 { font-size: 2.4em; }
     h6 { font-size: 1.4em; }
   }

@@ -6,9 +6,15 @@ const Footer = () => {
       <div className="info">
         <h5>
           &#9400; 2017 &mdash; SPARTA PLAESANT - 
-          <span>INSTAGRAM</span> - 
-          <span>FACEBOOK</span> - 
-          <span>TWITTER</span>
+          <span>
+            <a href="#">INSTAGRAM</a>
+          </span> - 
+          <span>
+            <a href="#">FACEBOOK</a>
+          </span> - 
+          <span>
+            <a href="#">TWITTER</a>
+          </span>
         </h5>
       </div>
     </footer>
