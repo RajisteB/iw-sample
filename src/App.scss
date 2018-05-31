@@ -155,17 +155,32 @@ body, html {
 // ====================
 // Grid - Container
 // --------------------
-.main-grid {
+.mobile-grid {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  @include flex(space-between, flex-start);
+}
+.col-grid-container {
   width: 90%;
   margin: 0 auto;
   max-width: 1440px;
-  flex-wrap: wrap;
-  @include flex(space-between, space-between);
+  display: flex;
+  justify-content: space-between;
+  height: auto;
 }
-.grid-item {
-  padding: 15px 0px ;
-  flex-basis: auto;
+.grid-col {
+  width: 30%;
+}
+.mobile-col {
   width: 47.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.gridItems {
+  padding: 15px 0px;
+  width: 100%;
   @include flex(flex-start, flex-start);
   flex-direction: column;
   img {

@@ -1,12 +1,12 @@
-import React from 'react';
-import GridItem from './gridItem';
-import '../App.css';
 import Layer_01 from '../images/Layer_01.png';
 import Layer_02 from '../images/Layer_02.png';
 import Layer_03 from '../images/Layer_03.png';
 import Layer_04 from '../images/Layer_04.png';
 import Layer_05 from '../images/Layer_05.png';
 import Layer_06 from '../images/Layer_06.png';
+import React from 'react';
+import GridItem from './gridItem';
+import '../App.css';
 
 const data = [
   {
@@ -47,14 +47,69 @@ const data = [
   }
 ]
 
+let col0 = [],
+    col1 = [],
+    col2 = [],
+    count = 0,
+    mobile_col0 = [],
+    mobile_col1 = [];
+
 const Grid = () => {
-  return (
-    <div className="main-grid">
-      {data.map((d, idx) => {
-        return <GridItem data={d} key={d.id}/>
-      })}
-    </div>
-  )
+  let windowWidth = window.innerWidth;
+  console.log(windowWidth);
+
+  if ( windowWidth > 770 ) {
+
+    data.map(d => {
+      count === 0 ? col0.push(d) :
+      count === 1 ? col1.push(d) :
+      col2.push(d);
+      count >= 2 ? count = 0 : count++;
+    });
+
+    return (
+      <div className="col-grid-container">
+        <div className="grid-col">
+          {col0.map((d, idx) => {
+            return <GridItem data={d} key={d.id} />
+          })}
+        </div>
+        <div className="grid-col">
+          {col1.map((d, idx) => {
+            return <GridItem data={d} key={d.id} />
+          })}
+        </div>
+        <div className="grid-col">
+          {col2.map((d, idx) => {
+            return <GridItem data={d} key={d.id} />
+          })}
+        </div>   
+      </div>
+    )
+
+  } else {
+
+    data.map(d => {
+      let id = d.id;
+      id === 0 || id % 2 === 0 ? mobile_col0.push(d) :
+      mobile_col1.push(d);
+    });
+
+    return (
+      <div className="mobile-grid">
+        <div className="mobile-col">
+          {mobile_col0.map((d, idx) => {
+            return <GridItem data={d} key={d.id} />
+          })}
+        </div>
+        <div className="mobile-col">
+          {mobile_col1.map((d, idx) => {
+            return <GridItem data={d} key={d.id} />
+          })}
+        </div> 
+      </div>
+    )
+  }
 }
 
 export default Grid;

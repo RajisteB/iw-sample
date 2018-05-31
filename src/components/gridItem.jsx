@@ -1,8 +1,9 @@
 import React from 'react';
+import '../App.scss'
 
 const GridItem = (props) => {
   return (
-    <div className="grid-item">
+    <div className="gridItems">
       <img src={props.data.image} alt=""/>
       <h4>{props.data.date}</h4>
       <h2>{props.data.desc}</h2>

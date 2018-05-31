@@ -116,41 +116,56 @@ body, html {
   border-radius: 50%;
   background-color: gray; }
 
-.main-grid {
+.mobile-grid {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-grid-container {
   width: 90%;
   margin: 0 auto;
   max-width: 1440px;
-  flex-wrap: wrap;
   display: flex;
-  align-items: space-between;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: auto; }
 
-.grid-item {
-  padding: 15px 0px;
-  flex-basis: auto;
+.grid-col {
+  width: 30%; }
+
+.mobile-col {
   width: 47.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between; }
+
+.gridItems {
+  padding: 15px 0px;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column; }
-  .grid-item img {
+  .gridItems img {
     width: 100%; }
-  .grid-item h4 {
+  .gridItems h4 {
     color: rgba(0, 0, 0, 0.3);
     padding: 25px 0px 15px 0px;
     font-size: 0.8em;
     font-family: 'Arial', sans-serif; }
-  .grid-item h2 {
+  .gridItems h2 {
     font-size: 1.5em;
     font-family: 'Springville', sans-serif; }
-    .grid-item h2:hover {
+    .gridItems h2:hover {
       cursor: pointer;
       text-decoration: underline; }
-  .grid-item h5 {
+  .gridItems h5 {
     padding: 10px 0px;
     font-size: 0.8em;
     font-weight: thin; }
-    .grid-item h5 a {
+    .gridItems h5 a {
       color: black;
       text-decoration: underline; }
 
