@@ -56,7 +56,6 @@ let col0 = [],
 
 const Grid = () => {
   let windowWidth = window.innerWidth;
-  console.log(windowWidth);
 
   if ( windowWidth > 770 ) {
 

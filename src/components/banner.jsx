@@ -68,15 +68,25 @@ class Banner extends Component {
     let { index, width } = this.state;
     let image = images[index];
     let styles = null;
+    let imageStyle = null;
     let dotStyle = null;
     const dots = [1, 2, 3];
 
+    // banner image container aspect ratio
     styles = width <= 780 ? 
     { 
       width: width, 
       height: (width / 4) * 3,
     } 
     : null;
+
+    // banner image sizing
+    imageStyle = width <= 780 ? 
+    {
+      width: 'auto',
+      height: '100%',
+    } : null;
+
 
     return (
       <section>
@@ -85,7 +95,7 @@ class Banner extends Component {
           onTouchMove={this.handleTouchMove}
           onTouchEnd={this.handleTouchEnd}
         >
-          <img id="banner-imgs" src={image} alt="banner" className="banner-img" style={styles} />
+          <img id="banner-imgs" src={image} alt="banner" className="banner-img" style={imageStyle} />
           <div className="overlay">
             <div className="headline">
               <h1>

@@ -1,0 +1,10 @@
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin logo-ratio($height) {
+  width: $height * 5.76;
+  height: $height;
+}

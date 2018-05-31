@@ -168,11 +168,13 @@ body, html {
     .gridItems h5 a {
       color: black;
       text-decoration: underline; }
+  .gridItems .separator {
+    margin: 50px 0px 30px 0px; }
 
 footer {
   width: 100%;
   margin: 0 auto;
-  padding: 25px 0px;
+  padding: 65px 0px 25px 0px;
   max-width: 1440px;
   text-align: center;
   font-family: 'Arial', sans-serif; }
@@ -225,12 +227,7 @@ footer {
   .headline h3 {
     font-size: 2em; }
   .headline h6 {
-    font-size: 1em; }
-  .grid-item {
-    flex-basis: auto;
-    width: 30%; }
-    .grid-item h2 {
-      font-size: 2em; } }
+    font-size: 1em; } }
 
 @media screen and (min-width: 1024px) {
   .banner {
@@ -242,8 +239,8 @@ footer {
     font-size: 2.2em; }
   .headline h6 {
     font-size: 1.2em; }
-  .grid-item h2 {
-    font-size: 2.5em; } }
+  .gridItems h2 {
+    font-size: 3.5em; } }
 
 @media screen and (min-width: 1440px) {
   .banner {
@@ -255,5 +252,5 @@ footer {
     font-size: 2.4em; }
   .headline h6 {
     font-size: 1.4em; }
-  .grid-item h2 {
+  .gridItems h2 {
     font-size: 2.5em; } }
