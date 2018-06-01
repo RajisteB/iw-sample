@@ -2,6 +2,7 @@
   width: 90%;
   margin: 0 auto;
   max-width: 800px;
+  padding-top: 50px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between; }
@@ -12,6 +13,7 @@
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
+  padding-top: 50px;
   justify-content: space-between; }
 
 .grid-col {

@@ -57,7 +57,7 @@ let col0 = [],
 const Grid = () => {
   let windowWidth = window.innerWidth;
 
-  if ( windowWidth > 770 ) {
+  if ( windowWidth > 1024 ) {
 
     data.map(d => {
       count === 0 ? col0.push(d) :

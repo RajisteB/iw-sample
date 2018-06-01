@@ -120,6 +120,7 @@ body, html {
   width: 90%;
   margin: 0 auto;
   max-width: 800px;
+  padding-top: 50px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between; }
@@ -130,6 +131,7 @@ body, html {
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
+  padding-top: 50px;
   justify-content: space-between; }
 
 .grid-col {
@@ -227,7 +229,9 @@ footer {
   .headline h3 {
     font-size: 2em; }
   .headline h6 {
-    font-size: 1em; } }
+    font-size: 1.2em; }
+  .gridItems h2 {
+    font-size: 2.5em; } }
 
 @media screen and (min-width: 1024px) {
   .banner {
@@ -251,6 +255,4 @@ footer {
   .headline h3 {
     font-size: 2.4em; }
   .headline h6 {
-    font-size: 1.4em; }
-  .gridItems h2 {
-    font-size: 2.5em; } }
+    font-size: 1.4em; } }

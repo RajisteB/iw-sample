@@ -52,7 +52,10 @@
   .headline {
     h1 { font-size: 3.5em; }
     h3 { font-size: 2em; }
-    h6 { font-size: 1em; }
+    h6 { font-size: 1.2em; }
+  }
+  .gridItems h2 {
+      font-size: 2.5em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -80,10 +83,5 @@
     h1 { font-size: 4.4em; }
     h3 { font-size: 2.4em; }
     h6 { font-size: 1.4em; }
-  }
-  .gridItems {
-    h2 {
-      font-size: 2.5em;
-    }
   }
 }

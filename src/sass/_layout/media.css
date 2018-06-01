@@ -39,7 +39,9 @@
   .headline h3 {
     font-size: 2em; }
   .headline h6 {
-    font-size: 1em; } }
+    font-size: 1.2em; }
+  .gridItems h2 {
+    font-size: 2.5em; } }
 
 @media screen and (min-width: 1024px) {
   .banner {
@@ -63,6 +65,4 @@
   .headline h3 {
     font-size: 2.4em; }
   .headline h6 {
-    font-size: 1.4em; }
-  .gridItems h2 {
-    font-size: 2.5em; } }
+    font-size: 1.4em; } }
