@@ -1,0 +1,58 @@
+@import '../_abstracts/mixins.scss';
+
+.banner {
+  overflow: hidden;
+  position: relative;
+  max-width: 1440px;
+  margin-top: 50px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 8;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(flex-start, center);
+  .headline {
+    width: 90%;
+    color: white;
+    margin: 0 auto;
+  }
+}
+
+// ====================
+// Banner Headline
+// --------------------
+.headline {
+  padding-top: 45px;
+  h1 {
+    font-size: 1.7em;
+    font-family: 'Springville', sans-serif;
+  }
+  h3 {
+    font-size: 1em;
+    font-family: 'ACaslon', sans-serif;
+  }
+  h6 {
+    font-size: 0.7em;
+    font-family: 'ACaslon', sans-serif;
+  }
+}
+
+// ====================
+// Banner Image Dots
+// --------------------
+.dots-container {
+  width: 100%;
+  @include flex(center, center)
+}
+
+.dots {
+  width: 8px;
+  height: 8px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: gray;
+}

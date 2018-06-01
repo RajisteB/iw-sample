@@ -1,0 +1,24 @@
+.mobile-grid {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-grid-container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1440px;
+  justify-content: space-between; }
+
+.grid-col {
+  width: 30%; }
+
+.mobile-col {
+  width: 47.5%;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column; }

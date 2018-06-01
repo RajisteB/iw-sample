@@ -1,0 +1,37 @@
+@import '../_abstracts/mixins.scss';
+
+.gridItems {
+  width: 100%;
+  padding: 15px 0px;
+  flex-direction: column;
+  @include flex(flex-start, flex-start);
+  img {
+    width: 100%;
+  }
+  h4 {
+    color: rgba(0, 0, 0, 0.3);
+    padding: 25px 0px 15px 0px;
+    font-size: 0.8em;
+    font-family: 'Arial', sans-serif;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-family: 'Springville', sans-serif;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  h5 {
+    padding: 10px 0px;
+    font-size: 0.8em;
+    font-weight: thin;
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+  .separator {
+    margin: 50px 0px 30px 0px;
+  }
+}

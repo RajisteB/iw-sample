@@ -100,7 +100,7 @@ body, html {
     font-size: 1em;
     font-family: 'ACaslon', sans-serif; }
   .headline h6 {
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-family: 'ACaslon', sans-serif; }
 
 .dots-container {
@@ -126,11 +126,11 @@ body, html {
 
 .col-grid-container {
   width: 90%;
+  height: auto;
   margin: 0 auto;
-  max-width: 1440px;
   display: flex;
-  justify-content: space-between;
-  height: auto; }
+  max-width: 1440px;
+  justify-content: space-between; }
 
 .grid-col {
   width: 30%; }
@@ -138,16 +138,16 @@ body, html {
 .mobile-col {
   width: 47.5%;
   display: flex;
-  flex-direction: column;
-  align-items: space-between; }
+  align-items: space-between;
+  flex-direction: column; }
 
 .gridItems {
-  padding: 15px 0px;
   width: 100%;
+  padding: 15px 0px;
+  flex-direction: column;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column; }
+  justify-content: flex-start; }
   .gridItems img {
     width: 100%; }
   .gridItems h4 {
@@ -174,7 +174,7 @@ body, html {
 footer {
   width: 100%;
   margin: 0 auto;
-  padding: 65px 0px 25px 0px;
+  padding: 75px 0px 25px 0px;
   max-width: 1440px;
   text-align: center;
   font-family: 'Arial', sans-serif; }
@@ -186,7 +186,7 @@ footer {
       footer h5 span a {
         color: black; }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 345px) {
   .logo.col > img {
     width: 138.24px;
     height: 24px; }

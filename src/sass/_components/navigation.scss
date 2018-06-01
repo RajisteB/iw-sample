@@ -1,0 +1,40 @@
+@import '../_abstracts/mixins.scss';
+
+.nav-container {
+  width: 100%;
+  height: 50px;
+
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: fixed;
+  background: white;
+}
+.navbar {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  @include flex(space-between, center);
+  .logo {
+    height: 100%;
+    @include flex(flex-start, center);
+    img {
+      @include logo-ratio(18px);
+    }
+  }
+}
+.nav-items {
+  font-size: 0.38em;
+  font-family: 'Arial', sans-serif;
+  @include flex(space-between, center);
+  .item:nth-child(1),
+  .item:nth-child(2) {
+    opacity: 0.4;
+    margin-right: 2.5em;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

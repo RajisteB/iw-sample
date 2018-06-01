@@ -1,0 +1,18 @@
+footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 75px 0px 25px 0px;
+  max-width: 1440px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  h5 {
+    font-size: 0.8em;
+    span {
+      margin-left: 1px;
+      text-decoration: underline;
+      a {
+        color: black;
+      }
+    }
+  }
+}

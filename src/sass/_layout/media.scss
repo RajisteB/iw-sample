@@ -1,0 +1,89 @@
+@import '../_abstracts/mixins.scss';
+
+@media screen and (min-width: 345px) {
+  .logo.col>img {
+    @include logo-ratio(24px);
+  }
+  .nav-items {
+    font-size: 0.5em;
+  }
+  .item img {
+    height: 12px;
+  }
+  .banner {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .nav-container {
+    height: 60px;
+  }
+  .logo.col>img {
+    @include logo-ratio(32px);
+  }
+  .nav-items {
+    font-size: 0.6em;
+  }
+  .item img {
+    height: 14px;
+  }
+  .banner {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    height: 70px;
+  }
+  .logo.col>img {
+    @include logo-ratio(34px);
+  }
+  .nav-items {
+    font-size: 0.8em;
+  }
+  .item img {
+    height: 18px;
+  }
+  .banner {
+    margin-top: 70px;
+  }
+  .headline {
+    h1 { font-size: 3.5em; }
+    h3 { font-size: 2em; }
+    h6 { font-size: 1em; }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .headline {
+    h1 { font-size: 4em; }
+    h3 { font-size: 2.2em; }
+    h6 { font-size: 1.2em; }
+  }
+  .gridItems {
+    h2 {
+      font-size: 3.5em;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .banner {
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .headline {
+    h1 { font-size: 4.4em; }
+    h3 { font-size: 2.4em; }
+    h6 { font-size: 1.4em; }
+  }
+  .gridItems {
+    h2 {
+      font-size: 2.5em;
+    }
+  }
+}
